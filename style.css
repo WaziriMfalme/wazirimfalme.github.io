@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #E8F5E9;      
+    --text: #2E7D32;
+    --link: #2E7D32;     
+}
+
+[data-theme="light"] {
+    --bg: white;
+    --text: black;
+    --link: #006400;     
+}
+
+[data-theme="dark"] {
+    --bg: #222;
+    --text: white;
+    --link: #90EE90;     
+}
+
+[data-theme="nature"] {
+    --bg: #E8F5E9;
+    --text: #2E7D32;
+    --link: #2E7D32;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Rockwell, "Roboto Slab", Georgia, "Courier New", Courier, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline; 
+}
+
+header {
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+h1, h2, h3 {
+    color: #2E7D32; 
+    font-family: Rockwell, "Roboto Slab", Georgia, "Courier New", Courier, "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+.theme-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: Rockwell, "Roboto Slab", Georgia, "Courier New", Courier, "Times New Roman", Times, serif;
+}
+
+button:hover,
+button:focus {
+    background-color: #388E3C;
+    outline: none;
+}
+
+footer {
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    header {
+        padding: 2rem 1.5rem;
+    }
+
+    nav a {
+        margin: 0 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 0 2rem;
+        max-width: 90%;
+    }
+
+    .theme-buttons {
+        gap: 1.5rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 3rem 2rem;
+    }
+
+    main {
+        max-width: 900px;
+        padding: 0 3rem;
+        margin: 3rem auto;
+    }
+
+    nav a {
+        margin: 0 2rem;
+        font-size: 1.2rem;
+    }
+
+    .theme-buttons {
+        margin: 3rem 0;
+    }
+
+    footer {
+        padding: 1.5rem;
+    }
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 1.5rem auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
